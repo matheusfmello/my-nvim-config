@@ -29,6 +29,16 @@ return require('packer').startup(function(use)
   }
   use 'ThePrimeagen/vim-be-good'
   use 'lewis6991/gitsigns.nvim'
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  use {
+	'hrsh7th/nvim-cmp',
+  	requires = {
+    		'hrsh7th/cmp-nvim-lsp',
+  }
+}
+  
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
